@@ -1,5 +1,4 @@
-#create schema if not exists indego;
-
+create schema if not exists indego;
 DROP TABLE IF EXISTS indego_trips_2021_q3;
 CREATE TABLE indego_trips_2021_q3
 (
@@ -23,8 +22,6 @@ CREATE TABLE indego_trips_2021_q3
 COPY indego_trips_2021_q3 FROM 'C:/Users/super/Downloads/School Work/MUSA 5090/5090assignment01/indego-trips-2021-q3/indego-trips-2021-q3.csv' CSV HEADER;
 
 SELECT * FROM indego_trips_2021_q3;
-
-#-------------------------------------------------#
 
 DROP TABLE IF EXISTS indego_trips_2022_q3;
 CREATE TABLE indego_trips_2022_q3
