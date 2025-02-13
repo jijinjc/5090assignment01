@@ -7,9 +7,6 @@
 */
 
 -- Enter your SQL query here
-
-#SET search_path TO phl, public;
-
 SELECT 
     id AS station_id, 
     name AS station_name, 

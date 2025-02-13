@@ -5,7 +5,6 @@
 */
 
 -- Enter your SQL query here
-#SET search_path TO phl, public;
 SELECT 
     ROUND(AVG(ST_Distance(
         ST_Transform(indego.station_statuses.geog::geometry, 32129),

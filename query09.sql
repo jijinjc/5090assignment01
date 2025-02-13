@@ -7,7 +7,6 @@
 */
 
 -- Enter your SQL query here
-
 SELECT passholder, SUM(num_trips) AS num_trips
 FROM (
     SELECT passholder, COUNT(*) AS num_trips FROM indego.trips_2021_q3 GROUP BY passholder

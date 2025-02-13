@@ -6,8 +6,6 @@
 */
 
 -- Enter your SQL query here
-
-#SET search_path TO phl, public;
 SELECT 
     COUNT(*) AS num_stations
 FROM indego.station_statuses

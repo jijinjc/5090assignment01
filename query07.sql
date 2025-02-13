@@ -6,23 +6,6 @@
 */
 
 -- Enter your SQL query here
-
--- ALTER Table indego_trips_2021_q3
--- ALTER COLUMN start_time TYPE TIMESTAMP 
--- USING TO_TIMESTAMP(start_time, 'MM/DD/YYYY HH24:MI');
-
--- ALTER TABLE indego_trips_2021_q3 
--- ALTER COLUMN end_time TYPE TIMESTAMP 
--- USING TO_TIMESTAMP(end_time, 'MM/DD/YYYY HH24:MI');
-
--- ALTER Table indego_trips_2022_q3
--- ALTER COLUMN start_time TYPE TIMESTAMP 
--- USING TO_TIMESTAMP(start_time, 'MM/DD/YYYY HH24:MI');
-
--- ALTER TABLE indego_trips_2022_q3 
--- ALTER COLUMN end_time TYPE TIMESTAMP 
--- USING TO_TIMESTAMP(end_time, 'MM/DD/YYYY HH24:MI');
-
 SELECT 
     2021 AS trip_year, 
     'Q3' AS trip_quarter, 

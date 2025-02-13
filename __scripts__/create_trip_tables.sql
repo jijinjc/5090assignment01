@@ -53,3 +53,6 @@ SELECT * FROM indego_trips_2022_q3;
 DROP EXTENSION postgis;
 
 create extension if not exists postgis;
+
+
+

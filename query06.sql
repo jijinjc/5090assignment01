@@ -7,7 +7,6 @@
 */
 
 -- Enter your SQL query here
-
 SELECT 
     2021 AS trip_year, 
     'Q3' AS trip_quarter, 
