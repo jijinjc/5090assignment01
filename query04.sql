@@ -7,4 +7,4 @@
 
 -- Enter your SQL query here
 SELECT Round(AVG(duration), 2) AS avg_duration
-FROM indego_trips_2022_q3;
+FROM indego.trips_2022_q3;

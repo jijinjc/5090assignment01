@@ -7,12 +7,12 @@
 
 -- Enter your SQL query here
 
-SET search_path TO phl, public;
+#SET search_path TO phl, public;
 SELECT 
     COUNT(*) AS num_stations
-FROM phlstations
+FROM indego.station_statuses
 WHERE ST_Distance(
-    phlstations.geog, 
+    indego.station_statuses.geog, 
     ST_SetSRID(ST_MakePoint(-75.192584, 39.952415), 4326)::geography
 ) <= 1000;
 

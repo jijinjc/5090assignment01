@@ -10,20 +10,20 @@
 
 -- Enter your SQL query here
 
-SET search_path TO phl, public;
+# SET search_path TO phl, public;
 
 WITH combined_trips AS (
     SELECT 
         start_station AS station_id,
-        ST_SetSRID(st_makepoint(start_lon::float, start_lat::float), 4326) AS station_geog,
+        public.ST_SetSRID(public.st_makepoint(start_lon::float, start_lat::float), 4326) AS station_geog,
         COUNT(*) AS num_trips
     FROM (
         SELECT start_station, start_lat, start_lon
-        FROM indego_trips_2021_q3
+        FROM indego.trips_2021_q3
         WHERE EXTRACT(HOUR FROM start_time) BETWEEN 7 AND 9
         UNION ALL
         SELECT start_station, start_lat, start_lon
-        FROM indego_trips_2022_q3
+        FROM indego.trips_2022_q3
         WHERE EXTRACT(HOUR FROM start_time) BETWEEN 7 AND 9
     ) AS all_trips
     GROUP BY start_station, start_lat, start_lon
