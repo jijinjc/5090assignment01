@@ -9,8 +9,6 @@
 */
 
 -- Enter your SQL query here
-
-# SET search_path TO phl, public;
 WITH combined_trips AS (
     SELECT 
         start_station AS station_id,
