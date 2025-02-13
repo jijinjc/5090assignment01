@@ -7,13 +7,13 @@
 */
 
 -- Enter your SQL query here
-SELECT passholder, SUM(num_trips) AS num_trips
+SELECT passholder_type, SUM(num_trips) AS num_trips
 FROM (
-    SELECT passholder, COUNT(*) AS num_trips FROM indego.trips_2021_q3 GROUP BY passholder
+    SELECT passholder AS passholder_type, COUNT(*) AS num_trips FROM indego.trips_2021_q3 GROUP BY passholder
     UNION ALL
-    SELECT passholder, COUNT(*) AS num_trips FROM indego.trips_2022_q3 GROUP BY passholder
+    SELECT passholder AS passholder_type, COUNT(*) AS num_trips FROM indego.trips_2022_q3 GROUP BY passholder
 ) COMBINED
-GROUP BY passholder
+GROUP BY passholder_type
 ORDER BY num_trips DESC;
 
     
